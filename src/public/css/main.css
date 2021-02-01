@@ -1,0 +1,219 @@
+body{
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* font-family:  'Nerko One', cursive; */
+    font-family: 'Baloo 2', cursive;
+
+
+}
+
+.product {
+
+    transition: 1s;
+    
+}
+.product:hover {
+    position: static;
+    z-index: 1;
+    transform: scale(1.1); 
+}
+.product:hover * .precio-cc {
+    text-decoration: underline rgb(3, 3, 3);    
+}
+.product:hover * .btnorden {
+    background-color: rgb(44, 43, 43);
+    border-radius: 5px;   
+    color: rgb(231, 231, 231);
+}
+.btnorden {
+    padding: 0;
+    border: none;
+    background: none;
+}
+.btnorden:hover {
+    padding: 0;
+    border: #272727;
+    background: #ffffff;    
+}
+.top-product-start{
+    border-radius: 5px; 
+    background-color: rgba(252, 252, 252, 0);
+    border-color: rgb(141, 141, 141);
+    border-width: 1.3px;
+    border-style: solid; 
+    color: goldenrod;   
+}
+.top-product-info{
+    border-radius: 5px; 
+    background-color: rgba(252, 252, 252, 0);
+    border-color: rgb(141, 141, 141);
+    border-width: 1.3px;
+    border-style: solid; 
+    color:  rgb(1, 1, 110);  
+}
+.top-product-like{
+    background-color: rgba(252, 252, 252, 0);
+    border-radius: 5px; 
+    border-color: rgb(141, 141, 141);
+    border-width: 1.3px;
+    border-style: solid; 
+    color:  rgb(190, 27, 27);  
+}
+
+i {
+    font-size: 30px;
+    padding-left : 1rem;
+    padding-right : 1rem;
+    cursor: pointer;
+  }
+  
+.img-opt{
+    filter: saturate(10%);
+    border-radius: 5px;
+  }
+  
+.img-opt:hover {
+    border-radius: 10px;
+    filter: saturate(100%);
+    transform: scale(1.1); 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    /* border: 2px solid #132350; */
+}
+.img-optActive {
+    filter: saturate(100%);    
+  background: #ebebeb; 
+  border: 2px solid #132350;
+  color: rgb(0, 0, 0); 
+   border-radius: 10px;
+}
+/* BANNER */
+.banner{
+    border-radius: 10px;
+    border-bottom: 2px solid #132350;
+}
+
+/* CSS FOR SELECT WHIT IMG */
+
+a{
+    text-decoration: none;
+}
+
+.contenedor {   
+    margin: auto;
+    padding: 40px 0;
+}
+.selectbox {
+    margin: auto;
+    position: relative;
+}
+
+.select{
+    background: #fff;
+    width: 100%;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s ease all;
+    margin-bottom: 30px;
+    padding: 30px;
+    position: relative;
+    z-index: 200;
+    border: 2px solid transparent;
+}
+
+.select.active {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    border: 2px solid #213f8f;
+}
+.select:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+    border: 2px solid #213f8f;
+}
+
+.select.active:before{
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #213f8f;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+}
+
+.select i{
+    font-size: 30px;
+    margin-left: 30px;
+    color: #213f8f;
+}
+
+.titulo {
+    margin-bottom: 10px;
+    color: #000;
+    
+}
+
+.opciones{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.16);
+    max-height: 500px;
+    overflow: auto;
+    z-index: 100;
+    display: none;
+
+}
+
+.opciones.active{
+    display: block;
+    animation: fadeIn .3s forwards;
+}
+
+/* ANIMACION */
+@keyframes fadeIn {
+    from {
+        transform: translateY(-200px) scale(.5);
+    }
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.contenido-opcion{
+    display: flex;
+    align-items: center;
+    
+    transition: .2s ease all;  
+}
+
+.opciones .contenido-opcion{
+    padding: 30px;
+}
+
+.contenido-opcion img{
+    width: 70px;
+    height: 70px;
+    margin-right: 30px;
+}
+
+.opciones .contenido-opcion:hover{
+    background: #213f8f;    
+}
+
+.opciones .contenido-opcion:hover .titulo,
+.opciones .contenido-opcion:hover .descripcion{
+    color: #fff;    
+}
+
+@media screen and (max-width: 800px){
+    .selectbox {
+        width: 100%;
+    }
+}
